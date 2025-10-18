@@ -1,13 +1,11 @@
 import Fastify from "fastify";
-import { sendToQueue } from "./producer";
+import { eventsRoutes } from "./routes/events.routes";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = Fastify();
 
-app.post("/events", async (request, reply) => {
-  const payload = request.body;
-  await sendToQueue(payload);
-  return reply.status(200).send({ ok: true });
-});
+app.register(eventsRoutes);
 
 app.listen({ port: 3000 }, () => {
   console.log("🚀 API running on http://localhost:3000");
