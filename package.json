@@ -1,0 +1,18 @@
+{
+  "name": "amazon-sqs-node",
+  "version": "1.0.0",
+  "description": "Simples projeto desenvolvido em Node.js, para aprofundar no uso de SQS para filas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinicius Trajano",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.913.0",
+    "dotenv": "^17.2.3",
+    "fastify": "^5.6.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}
