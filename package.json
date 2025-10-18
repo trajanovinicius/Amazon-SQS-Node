@@ -4,7 +4,8 @@
   "description": "Simples projeto desenvolvido em Node.js, para aprofundar no uso de SQS para filas.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "author": "Vinicius Trajano",
   "license": "ISC",
