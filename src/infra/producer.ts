@@ -1,5 +1,5 @@
 import { SendMessageCommand } from "@aws-sdk/client-sqs";
-import { sqsClient } from "./sqsClient";
+import { sqsClient } from "../infra/sqsClient";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -11,5 +11,6 @@ export async function sendToQueue(message: any) {
   };
   const command = new SendMessageCommand(params);
   const response = await sqsClient.send(command);
-  console.log("Mensagem Enviada com Sucesso:", response.MessageId);
+
+  return response.MessageId;
 }
